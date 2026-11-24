@@ -1,0 +1,24 @@
+# Core Scientific & Data Processing
+pandas>=2.2.0
+numpy>=1.26.0
+scipy>=1.12.0
+scikit-learn>=1.4.0
+imbalanced-learn>=0.12.0
+lightgbm>=4.0.0
+xgboost>=2.0.0
+
+# Visualization & Aesthetics
+matplotlib>=3.8.0
+seaborn>=0.13.0
+streamlit>=1.30.0
+
+# Dataset Access
+ucimlrepo>=0.0.7
+requests>=2.31.0
+
+# Jupyter & Notebook Execution
+jupyterlab>=4.1.0
+notebook>=7.1.0
+ipykernel>=6.29.0
+nbformat>=5.9.0
+nbconvert>=7.16.0

@@ -1,0 +1,15 @@
+services:
+  diabetes-eda:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: diabetes_prediction_eda
+    ports:
+      - "8888:8888"
+    volumes:
+      # Mount workspace directory so any notebooks, plots, or downloaded data persist locally
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    working_dir: /app
+    restart: unless-stopped
