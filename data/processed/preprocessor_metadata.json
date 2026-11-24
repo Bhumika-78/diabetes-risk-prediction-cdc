@@ -1,0 +1,63 @@
+{
+    "dataset": "CDC Diabetes Health Indicators BRFSS 2015",
+    "split_ratio": {
+        "train": 0.8,
+        "test": 0.2
+    },
+    "random_state": 42,
+    "train_sample_count": 202944,
+    "test_sample_count": 50736,
+    "total_features": 28,
+    "original_features": [
+        "HighBP",
+        "HighChol",
+        "CholCheck",
+        "BMI",
+        "Smoker",
+        "Stroke",
+        "HeartDiseaseorAttack",
+        "PhysActivity",
+        "Fruits",
+        "Veggies",
+        "HvyAlcoholConsump",
+        "AnyHealthcare",
+        "NoDocbcCost",
+        "GenHlth",
+        "MentHlth",
+        "PhysHlth",
+        "DiffWalk",
+        "Sex",
+        "Age",
+        "Education",
+        "Income"
+    ],
+    "engineered_features": [
+        "Comorbidity_Score",
+        "Obesity_Flag",
+        "Severe_Obesity_Flag",
+        "Metabolic_Syndrome_Proxy",
+        "Unhealthy_Days_Total",
+        "High_Risk_Age",
+        "Socioeconomic_Stress"
+    ],
+    "engineered_definitions": {
+        "Comorbidity_Score": "Integer count (0-4) of co-occurring conditions: HighBP + HighChol + HeartDiseaseorAttack + Stroke.",
+        "Obesity_Flag": "Binary indicator for Body Mass Index >= 30.0 (WHO/CDC Class I+ Obesity).",
+        "Severe_Obesity_Flag": "Binary indicator for Body Mass Index >= 35.0 (Class II+ Severe Obesity).",
+        "Metabolic_Syndrome_Proxy": "Co-occurrence of obesity (BMI >= 30), hypertension (HighBP=1), and hyperlipidemia (HighChol=1).",
+        "Unhealthy_Days_Total": "Sum of physically unhealthy and mentally unhealthy days in past 30 days (0-60).",
+        "High_Risk_Age": "Binary indicator for individuals aged 60 and older (Age category >= 9).",
+        "Socioeconomic_Stress": "Joint presence of lower educational attainment (<= Grade 11) and lower household income (<$20,000)."
+    },
+    "scaled_features": [
+        "BMI",
+        "PhysHlth",
+        "MentHlth",
+        "Unhealthy_Days_Total"
+    ],
+    "scaler_type": "RobustScaler",
+    "class_weights": {
+        "0": 0.5809,
+        "1": 3.5885
+    }
+}
