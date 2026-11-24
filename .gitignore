@@ -1,0 +1,1 @@
+# Byte‑size data & model artifacts\ndata/raw/\ndata/processed/\nmodels/\n# Python caches\n__pycache__/\n*.pyc\n# Jupyter checkpoints\n.ipynb_checkpoints/\n# Virtual environment\n.venv/\n# OS files\n.DS_Store\nThumbs.db\n# Streamlit cache\n.streamlit/\n
